@@ -7,24 +7,20 @@ interface PlayerProps {
 }
 
 export const Player: React.FC<PlayerProps> = ({ cpColor, gkColor }) => {
-  const gk = [1];
-  const cps = [2, 3, 4, 5, 6, 7];
+  const gkValue = 1;
+  const maxCpsValue = 12;
+  const cpsValuesArray = Array.from(
+    { length: maxCpsValue - 1 },
+    (_, index) => index + 2
+  );
   return (
-    <div className="flex">
-      {gk.map((gk) => {
-        return (
-          <Draggable defaultPosition={{ x: 0, y: 0 }}>
-            <div
-              key={gk}
-              className="person"
-              style={{ backgroundColor: gkColor }}
-            >
-              {gk}
-            </div>
-          </Draggable>
-        );
-      })}
-      {cps.map((cp) => {
+    <div className="flex flex-wrap">
+      <Draggable defaultPosition={{ x: 0, y: 0 }}>
+        <div className="person" style={{ backgroundColor: gkColor }}>
+          {gkValue}
+        </div>
+      </Draggable>
+      {cpsValuesArray.map((cp) => {
         return (
           <Draggable defaultPosition={{ x: 0, y: 0 }}>
             <div

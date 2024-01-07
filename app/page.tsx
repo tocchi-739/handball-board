@@ -1,4 +1,5 @@
 "use client";
+import { Balls } from "@/component/Balls";
 import { Court } from "@/component/Court";
 import { Header } from "@/component/Header";
 import { Player } from "@/component/Player";
@@ -13,23 +14,14 @@ export default function Home() {
         <Court />
       </div>
       <div className="flex justify-between w-full gap-4">
-        <div className="box-border p-4 bg-blue-400 w-1/3">
+        <div className="box-border p-4 bg-blue-400 w-1/3 flex-wrap">
           <Player gkColor="green" cpColor="red"></Player>
         </div>
-        <div className="box-border p-4 bg-blue-400 w-1/3">
+        <div className="box-border p-4 bg-blue-400 w-1/3 flex-wrap">
           <Player gkColor="gray" cpColor="blue"></Player>
         </div>
         <div className="box-border p-4 bg-blue-400 w-1/3">
-          <Draggable defaultPosition={{ x: 0, y: 0 }}>
-            <Image
-              src="/ball.png"
-              alt="ボールの画像"
-              width={60}
-              height={60}
-              priority
-              className="cursor-pointer"
-            />
-          </Draggable>
+          <Balls />
         </div>
       </div>
     </main>
