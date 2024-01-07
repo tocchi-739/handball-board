@@ -1,0 +1,90 @@
+:root {
+  --main-size: 40vw;
+}
+.coat-wrapper {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 242, 58, 1),
+    rgba(255, 213, 110, 1) 0% 94%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--main-size) / 10);
+}
+.coat {
+  width: var(--main-size);
+  height: var(--main-size);
+  background: rgb(202, 240, 255);
+  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.line-6m {
+  position: absolute;
+  top: calc(var(--main-size) / 8);
+  z-index: 10;
+}
+.line-6m .upper {
+  height: calc(var(--main-size) / 10 * 3);
+  width: calc(var(--main-size) / 10 * 3);
+  border-radius: 0 100% 0 0;
+  background: rgb(255, 245, 104);
+}
+.line-6m .middle {
+  height: calc(var(--main-size) / 20 * 3);
+  width: calc(var(--main-size) / 10 * 3);
+  background: rgb(255, 245, 104);
+}
+.line-6m .lower {
+  height: calc(var(--main-size) / 10 * 3);
+  width: calc(var(--main-size) / 10 * 3);
+  border-radius: 0 0 100% 0;
+  background: rgb(255, 245, 104);
+}
+.line-9m {
+  position: absolute;
+  top: calc(var(--main-size) / -40);
+}
+.line-9m .upper {
+  height: calc(var(--main-size) / 100 * 45);
+  width: calc(var(--main-size) / 100 * 45);
+  border-radius: 0 100% 0 0;
+  background: rgb(71, 74, 254);
+}
+.line-9m .middle {
+  height: calc(var(--main-size) / 20 * 3);
+  width: calc(var(--main-size) / 100 * 45);
+  background: rgb(71, 74, 254);
+}
+.line-9m .lower {
+  height: calc(var(--main-size) / 100 * 45);
+  width: calc(var(--main-size) / 100 * 45);
+  border-radius: 0 0 100% 0;
+  background: rgb(71, 74, 254);
+}
+/* right */
+.line-6m.right {
+  right: 0;
+}
+.line-6m.right .upper {
+  border-radius: 100% 0 0 0;
+}
+.line-6m.right .lower {
+  border-radius: 0 0 0 100%;
+}
+.line-9m.right {
+  right: 0;
+}
+.line-9m.right .upper {
+  border-radius: 100% 0 0 0;
+}
+.line-9m.right .lower {
+  border-radius: 0 0 0 100%;
+}
+.goal {
+  height: calc(var(--main-size) / 20 * 3);
+  width: calc(var(--main-size) / 20);
+  background: white;
+  border: 1px solid #000;
+}
