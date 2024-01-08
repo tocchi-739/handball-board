@@ -15,10 +15,10 @@ export const Header: React.FC<HeaderProps> = ({ setIsHalfCourt }) => {
       <h1>ハンドボールの作戦ボード</h1>
       <ul className="flex gap-4">
         <li>
-          <button onClick={switchHalfCourt}>ハーフコート</button>
+          <button onClick={switchHalfCourt}>ハーフ</button>
         </li>
         <li>
-          <button onClick={switchAllCourt}>オールコート</button>
+          <button onClick={switchAllCourt}>オール</button>
         </li>
       </ul>
     </header>

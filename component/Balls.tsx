@@ -7,8 +7,8 @@ const Ball = () => {
       <Image
         src="/ball.png"
         alt="ボールの画像"
-        width={60}
-        height={60}
+        width={30}
+        height={30}
         priority
         className="cursor-pointer"
       />
@@ -17,7 +17,7 @@ const Ball = () => {
 };
 
 export const Balls = () => {
-  const numberOfBalls = 10;
+  const numberOfBalls = 2;
 
   return (
     <div className="flex flex-wrap">

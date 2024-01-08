@@ -1,6 +1,3 @@
-:root {
-  --main-size: 40vw;
-}
 .person {
   width: calc(var(--main-size) / 10);
   height: calc(var(--main-size) / 10);

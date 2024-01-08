@@ -8,7 +8,7 @@ interface PlayerProps {
 
 export const Player: React.FC<PlayerProps> = ({ cpColor, gkColor }) => {
   const gkValue = 1;
-  const maxCpsValue = 12;
+  const maxCpsValue = 7;
   const cpsValuesArray = Array.from(
     { length: maxCpsValue - 1 },
     (_, index) => index + 2

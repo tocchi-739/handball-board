@@ -1,12 +1,12 @@
 :root {
-  --main-size: 40vw;
+  --main-size: 80vw;
 }
 .court-wrapper {
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle,
     rgba(255, 242, 58, 1),
     rgba(255, 213, 110, 1) 0% 94%
-  );
+  ); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +20,8 @@
 .court {
   width: var(--main-size);
   height: var(--main-size);
-  background: rgb(202, 240, 255);
-  border: 1px solid #000;
+  background: rgb(0, 80, 150);
+  border: 2px solid #fff;
   position: relative;
   overflow: hidden;
 }
@@ -34,18 +34,18 @@
   height: calc(var(--main-size) / 10 * 3);
   width: calc(var(--main-size) / 10 * 3);
   border-radius: 0 100% 0 0;
-  background: rgb(255, 245, 104);
+  background: rgb(255, 220, 100);
 }
 .line-6m .middle {
   height: calc(var(--main-size) / 20 * 3);
   width: calc(var(--main-size) / 10 * 3);
-  background: rgb(255, 245, 104);
+  background: rgb(255, 220, 100);
 }
 .line-6m .lower {
   height: calc(var(--main-size) / 10 * 3);
   width: calc(var(--main-size) / 10 * 3);
   border-radius: 0 0 100% 0;
-  background: rgb(255, 245, 104);
+  background: rgb(255, 220, 100);
 }
 .line-9m {
   position: absolute;
@@ -55,18 +55,18 @@
   height: calc(var(--main-size) / 100 * 45);
   width: calc(var(--main-size) / 100 * 45);
   border-radius: 0 100% 0 0;
-  background: rgb(71, 74, 254);
+  background: rgb(180, 50, 70);
 }
 .line-9m .middle {
   height: calc(var(--main-size) / 20 * 3);
   width: calc(var(--main-size) / 100 * 45);
-  background: rgb(71, 74, 254);
+  background: rgb(180, 50, 70);
 }
 .line-9m .lower {
   height: calc(var(--main-size) / 100 * 45);
   width: calc(var(--main-size) / 100 * 45);
   border-radius: 0 0 100% 0;
-  background: rgb(71, 74, 254);
+  background: rgb(180, 50, 70);
 }
 /* right */
 .line-6m.right {
@@ -91,5 +91,5 @@
   height: calc(var(--main-size) / 20 * 3);
   width: calc(var(--main-size) / 20);
   background: white;
-  border: 1px solid #000;
+  border: 2px solid #fff;
 }
