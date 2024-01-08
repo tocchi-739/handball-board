@@ -1,10 +1,10 @@
 import "./styles/court.css";
 
-export const Court = () => {
+export const AllCourt = () => {
   return (
-    <div className="coat-wrapper">
+    <div className="court-wrapper">
       <div className="goal left-goal"></div>
-      <div className="coat">
+      <div className="court">
         <div className="line-6m">
           <div className="upper"></div>
           <div className="middle"></div>
@@ -16,7 +16,7 @@ export const Court = () => {
           <div className="lower"></div>
         </div>
       </div>
-      <div className="coat">
+      <div className="court">
         <div className="line-6m right">
           <div className="upper"></div>
           <div className="middle"></div>
