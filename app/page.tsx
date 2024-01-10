@@ -1,12 +1,21 @@
 "use client";
 import { AllCourt } from "@/component/AllCourt";
 import { Balls } from "@/component/Balls";
+import { DottedLineDrawing } from "@/component/DottedLineDrawing";
 import { HalfCourt } from "@/component/HalfCourt";
 import { Header } from "@/component/Header";
 import { Player } from "@/component/Player";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import Draggable from "react-draggable";
+
+// const DottedLineDrawing = dynamic(
+//   () => import("../component/DottedLineDrawing"),
+//   {
+//     ssr: false,
+//   }
+// );
 
 export default function Home() {
   const [isHalfCourt, setIsHalfCourt] = useState(true);
@@ -25,6 +34,7 @@ export default function Home() {
         <div className="box-border lg:p-4 lg:w-1/3">
           <Balls />
         </div>
+        <DottedLineDrawing />
       </div>
     </main>
   );
