@@ -41,14 +41,42 @@ const DottedLineDrawing = () => {
     isDrawing.current = false;
   };
 
+  const handleTouchStart = (e: any) => {
+    isDrawing.current = true;
+    const pos = e.target.getStage().getPointerPosition();
+    if (pos) {
+      setLines([...lines, { tool, points: [pos.x, pos.y] }]);
+    }
+  };
+
+  const handleTouchMove = (e: any) => {
+    if (!isDrawing.current) {
+      return;
+    }
+    const stage = e.target.getStage();
+    const point = stage.getPointerPosition();
+    let lastLine = lines[lines.length - 1];
+    lastLine.points = lastLine.points.concat([point.x, point.y]);
+
+    lines.splice(lines.length - 1, 1, lastLine);
+    setLines(lines.concat());
+  };
+
+  const handleTouchEnd = () => {
+    isDrawing.current = false;
+  };
+
   return (
     <div>
       <Stage
         width={window.innerWidth}
         height={window.innerHeight}
         onMouseDown={handleMouseDown}
-        onMousemove={handleMouseMove}
-        onMouseup={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <Layer>
           <Text text="Just start drawing" x={5} y={30} />
