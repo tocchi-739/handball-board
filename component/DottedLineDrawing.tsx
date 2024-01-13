@@ -42,6 +42,7 @@ const DottedLineDrawing = () => {
   };
 
   const handleTouchStart = (e: any) => {
+    e.evt.preventDefault(); // タッチイベントのデフォルトの挙動を停止
     isDrawing.current = true;
     const pos = e.target.getStage().getPointerPosition();
     if (pos) {
@@ -50,6 +51,7 @@ const DottedLineDrawing = () => {
   };
 
   const handleTouchMove = (e: any) => {
+    e.evt.preventDefault(); // タッチイベントのデフォルトの挙動を停止
     if (!isDrawing.current) {
       return;
     }
@@ -62,7 +64,8 @@ const DottedLineDrawing = () => {
     setLines(lines.concat());
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e: any) => {
+    e.evt.preventDefault(); // タッチイベントのデフォルトの挙動を停止
     isDrawing.current = false;
   };
 
