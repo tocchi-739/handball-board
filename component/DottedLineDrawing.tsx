@@ -8,7 +8,7 @@ interface LineData {
   points: number[];
 }
 
-export const DottedLineDrawing = () => {
+const DottedLineDrawing = () => {
   const [tool, setTool] = useState<string>("pen");
   const [lines, setLines] = useState<LineData[]>([]);
   const isDrawing = useRef<boolean>(false);
@@ -80,6 +80,8 @@ export const DottedLineDrawing = () => {
     </div>
   );
 };
+
+export default DottedLineDrawing;
 
 // const container = document.getElementById('root');
 // const root = createRoot(container);
